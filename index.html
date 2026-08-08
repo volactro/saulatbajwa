@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saulat Bajwa — Executive CEO Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  .holo-emblem {
+    background: var(--bg-panel);
+    border: 1px solid var(--border-glow);
+    border-radius: 28px; padding: 60px 40px; text-align: center;
+    position: relative; overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.9), inset 0 0 30px rgba(255, 215, 0, 0.05);
+  }
+  .holo-emblem::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(circle at center, rgba(255, 215, 0, 0.1), transparent 70%);
+  }
+</style>
+</head>
+<body>
+
+<div class="preloader">
+  <div class="loading-text">SAULAT BAJWA</div>
+</div>
+
+<div class="cursor-dot"></div>
+<div class="cursor-outline"></div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">SAULAT BAJWA</a>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="enterprises.html">Enterprises</a>
+      <a href="about.html">About CEO</a>
+      <a href="map.html">Punjab Hub</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="tel:03008410721" class="btn" style="padding: 10px 20px; font-size: 13px;">0300 8410721</a>
+  </div>
+</header>
+
+<section class="hero section" style="padding-top: 200px;">
+  <div class="container" style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 50px; align-items: center;">
+    <div data-aos="fade-right">
+      <span style="font-size: 13px; text-transform: uppercase; letter-spacing: 3px; color: var(--gold-primary); font-weight: 800;">Chief Executive Officer</span>
+      <h1 style="font-size: 56px; font-weight: 900; line-height: 1.1; margin: 15px 0 25px; color: #fff;">Saulat Bajwa<br><span style="background: linear-gradient(135deg, #fff, var(--gold-primary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Architect of Enterprise Growth.</span></h1>
+      <p style="color: var(--text-muted); font-size: 17px; margin-bottom: 35px;">Directing industrial excellence, commercial trading, and advanced manufacturing across Pakistan with elite executive command.</p>
+      <div style="display: flex; gap: 20px;">
+        <a href="enterprises.html" class="btn">View Enterprises</a>
+        <a href="contact.html" class="btn" style="background: var(--bg-panel); color: #fff; border: 1px solid var(--border-glow);">Direct Inquiry</a>
+      </div>
+    </div>
+
+    <!-- No Image: Holographic Emblem Box -->
+    <div data-aos="fade-left" class="holo-emblem">
+      <div style="font-size: 50px; margin-bottom: 15px; text-shadow: 0 0 20px var(--gold-primary);">👑</div>
+      <h3 style="font-size: 28px; color: #fff; font-weight: 900; margin-bottom: 8px;">SAULAT BAJWA</h3>
+      <span style="color: var(--gold-primary); font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 3px;">Chief Executive Officer</span>
+      <p style="color: var(--text-muted); font-size: 14px; margin-top: 15px; line-height: 1.6;">BJ &amp; Company, BJ Commerce, Salharo, BJ Textiles</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand">SAULAT BAJWA</a>
+        <p style="color: var(--text-muted); margin-top: 15px; font-size: 14px;">Executive leadership portfolio representing BJ &amp; Company, BJ Commerce, Salharo, and BJ Textiles.</p>
+      </div>
+      <div>
+        <h5 style="color: #fff; margin-bottom: 15px;">Quick Links</h5>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; color: var(--text-muted); font-size: 14px;">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="enterprises.html">Enterprises</a></li>
+          <li><a href="about.html">About CEO</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 style="color: #fff; margin-bottom: 15px;">Contact Desk</h5>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; color: var(--text-muted); font-size: 14px;">
+          <li><a href="tel:03008410721">0300 8410721</a></li>
+          <li><a href="mailto:saulatbajwa@hotmail.com">saulatbajwa@hotmail.com</a></li>
+          <li>Punjab, Pakistan</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Saulat Bajwa. All rights reserved.</p>
+      <p>Email: saulatbajwa@hotmail.com | Phone: 03008410721</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/923008410721?text=Hello%20Sir%20Saulat%20Bajwa,%20I%20am%20contacting%20you%20from%20your%20portfolio." class="whatsapp-float" target="_blank">💬</a>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true });
+  window.addEventListener('mousemove', e => {
+    document.querySelector('.cursor-dot').style.left = e.clientX + 'px';
+    document.querySelector('.cursor-dot').style.top = e.clientY + 'px';
+    document.querySelector('.cursor-outline').style.left = e.clientX + 'px';
+    document.querySelector('.cursor-outline').style.top = e.clientY + 'px';
+  });
+</script>
+</body>
+</html>

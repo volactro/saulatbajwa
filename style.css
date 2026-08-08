@@ -1,0 +1,118 @@
+:root {
+  --bg-main: #020205;
+  --bg-panel: #09090e;
+  --gold-primary: #FFD700;
+  --gold-secondary: #FF8C00;
+  --gold-glow: rgba(255, 215, 0, 0.4);
+  --border-glow: rgba(255, 215, 0, 0.2);
+  --text-main: #f3f3f6;
+  --text-muted: #8c8c98;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
+  position: relative;
+  line-height: 1.7;
+}
+
+/* Moving Cyber-Gold Grid Background */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background-image: linear-gradient(rgba(255, 215, 0, 0.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 215, 0, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: -2;
+}
+
+/* Custom Moving Cursor Effect */
+.cursor-dot, .cursor-outline {
+  position: fixed; top: 0; left: 0; transform: translate(-50%, -50%);
+  border-radius: 50%; pointer-events: none; z-index: 99999;
+  transition: width 0.3s, height: 0.3s;
+}
+.cursor-dot { width: 8px; height: 8px; background: var(--gold-primary); box-shadow: 0 0 20px var(--gold-primary); }
+.cursor-outline {
+  width: 45px; height: 45px; border: 2px solid rgba(255, 215, 0, 0.4);
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.2);
+}
+
+/* Cinematic Preloader with Text Loading Animation */
+.preloader {
+  position: fixed; inset: 0; background: #010103;
+  z-index: 999999; display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  animation: hideLoader 0.5s ease 3.2s forwards;
+}
+.loading-text {
+  font-size: 38px; font-weight: 900; letter-spacing: 8px; color: #fff;
+  text-shadow: 0 0 35px var(--gold-primary);
+  border-right: 3px solid var(--gold-primary);
+  white-space: nowrap;
+  animation: typing 2.2s steps(12, end), blink-caret 0.75s step-end infinite;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--gold-primary); }
+}
+@keyframes hideLoader {
+  to { opacity: 0; visibility: hidden; pointer-events: none; }
+}
+
+/* Glassmorphism Navigation */
+.nav {
+  position: fixed; top: 0; left: 0; width: 100%;
+  background: rgba(2, 2, 5, 0.85); backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-glow);
+  z-index: 1000; padding: 18px 0;
+}
+.nav-inner {
+  max-width: 1200px; margin: 0 auto; padding: 0 20px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.brand { font-size: 22px; font-weight: 900; letter-spacing: 2px; color: #fff; text-shadow: 0 0 12px var(--gold-glow); }
+.nav-links { display: flex; gap: 30px; font-size: 14px; font-weight: 600; color: var(--text-muted); }
+.nav-links a:hover, .nav-links a.active { color: var(--gold-primary); text-shadow: 0 0 15px var(--gold-primary); }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 28px; border-radius: 12px; font-weight: 800; font-size: 14px;
+  background: linear-gradient(135deg, var(--gold-primary), var(--gold-secondary));
+  color: #020205; box-shadow: 0 4px 25px var(--gold-glow);
+  border: none; cursor: pointer; transition: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn:hover { transform: translateY(-4px); box-shadow: 0 8px 35px var(--gold-glow); }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.section { padding: 110px 0; position: relative; }
+.section-tight { padding: 60px 0; }
+
+/* WhatsApp Float */
+.whatsapp-float {
+  position: fixed; bottom: 35px; right: 35px; background-color: #25d366; color: #fff;
+  width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center;
+  justify-content: center; font-size: 32px; z-index: 9999;
+  box-shadow: 0 0 30px rgba(37, 211, 102, 0.6); transition: 0.3s;
+}
+.whatsapp-float:hover { transform: scale(1.12); }
+
+/* Footer */
+.footer { background: #010103; border-top: 1px solid var(--border-glow); padding: 70px 0 30px; margin-top: 100px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 50px; }
+.footer-bottom { border-top: 1px solid var(--border-glow); padding-top: 25px; display: flex; justify-content: space-between; font-size: 13px; color: var(--text-muted); }
+
+@media(max-width: 768px) {
+  .footer-grid { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+}
