@@ -2,140 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enterprises — Saulat Bajwa Group</title>
-    
-    <!-- Favicon Integration -->
-    <link rel="icon" type="image/png" href="BJ%26CO%20ORIGINAL%20PNG%20LOGO%20EDIT%20copy.png">
-    <link rel="shortcut icon" type="image/png" href="BJ%26CO%20ORIGINAL%20PNG%20LOGO%20EDIT%20copy.png">
-    
-    <!-- CSS & Fonts -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="BJ&CO ORIGINAL PNG LOGO EDIT copy.png">
     <link rel="stylesheet" href="style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-        .ent-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 40px;
-            margin-top: 60px;
-        }
-        .ent-card {
-            background: var(--bg-surface);
-            border: 1px solid var(--border-light);
-            border-radius: 24px;
-            padding: 50px 40px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap: 25px;
-            transition: var(--trans-smooth);
-            position: relative;
-            overflow: hidden;
-        }
-        .ent-card:hover {
-            border-color: var(--border-gold);
-            transform: translateY(-6px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-        }
-        .ent-logo {
-            height: 95px;
-            width: auto;
-            object-fit: contain;
-            filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.2));
-            transition: var(--trans-smooth);
-        }
-        .ent-card:hover .ent-logo {
-            transform: scale(1.06);
-        }
-        @media(max-width: 768px) {
-            .ent-grid { grid-template-columns: 1fr; }
-        }
-    </style>
 </head>
 <body>
+    <div class="preloader"><div class="typing-fx">SAULAT BAJWA</div></div>
+    <div class="cursor-dot"></div><div class="cursor-outline"></div>
 
-    <div class="ambient-glow"></div>
-
-    <div class="preloader">
-        <div class="preloader-line"></div>
-        <div class="preloader-text">Enterprises</div>
-    </div>
-
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
-
-    <header class="nav">
+    <header class="nav" id="navBar">
         <div class="nav-inner">
             <a href="index.html" class="brand">SAULAT <span>BAJWA</span></a>
-            <nav class="nav-links">
+            <div class="nav-links">
                 <a href="index.html">Vision</a>
                 <a href="enterprises.html" class="active">Enterprises</a>
                 <a href="about.html">Profile</a>
                 <a href="map.html">Network</a>
-            </nav>
-            <a href="contact.html" class="btn btn-outline" style="padding: 10px 24px; font-size: 12px; border-radius: 20px;">Contact Desk</a>
+            </div>
+            <a href="contact.html" class="btn-main">Inquiry</a>
         </div>
     </header>
 
-    <section class="section" style="padding-top: 200px;">
+    <section class="section">
         <div class="container">
-            <div data-aos="fade-up">
-                <span class="eyebrow">Corporate Portfolio</span>
-                <h1 class="display-title">Flagship <span>Group</span> Enterprises</h1>
-                <p class="lead-text">Under the direct leadership of Saulat Bajwa, each enterprise functions as a specialized engine of industry, driving commerce, textile innovation, and trade dominance.</p>
-            </div>
-
-            <div class="ent-grid">
-                <!-- 1. BJ & Company -->
-                <div class="ent-card" data-aos="fade-up" data-aos-delay="0">
-                    <img src="BJ&CO ORIGINAL PNG LOGO EDIT copy.png" alt="BJ & Company Logo" class="ent-logo">
-                    <h3 style="font-size: 24px; font-weight: 700; color: #fff;">BJ &amp; Company</h3>
-                    <p style="color: var(--text-secondary); font-size: 15px; line-height: 1.7;">The cornerstone corporate trade house, recognized for setting high institutional standards and managing bulk commercial procurement.</p>
+            <h1 class="title-big">Corporate <span class="text-gold">Portfolio</span></h1>
+            <div class="feature-grid">
+                <!-- BJ & Company -->
+                <div class="card">
+                    <img src="BJ&CO ORIGINAL PNG LOGO EDIT copy.png" width="100" alt="BJ & Company">
+                    <h3>BJ & Company</h3>
+                    <p>The institutional pillar of our commercial trade.</p>
                 </div>
-
-                <!-- 2. BJ Commerce -->
-                <div class="ent-card" data-aos="fade-up" data-aos-delay="100">
-                    <img src="bj commrece.png" alt="BJ Commerce Logo" class="ent-logo">
-                    <h3 style="font-size: 24px; font-weight: 700; color: #fff;">BJ Commerce (Pvt) Ltd</h3>
-                    <p style="color: var(--text-secondary); font-size: 15px; line-height: 1.7;">An advanced distribution entity specializing in widespread regional trade, seamless supply chain execution, and corporate distribution.</p>
+                <!-- BJ Commerce -->
+                <div class="card">
+                    <img src="bj commrece.png" width="100" alt="BJ Commerce">
+                    <h3>BJ Commerce</h3>
+                    <p>Supply chain excellence for large-scale operations.</p>
                 </div>
-
-                <!-- 3. BJ Textiles -->
-                <div class="ent-card" data-aos="fade-up" data-aos-delay="200">
-                    <img src="bj_text-png .png" alt="BJ Textiles Logo" class="ent-logo">
-                    <h3 style="font-size: 24px; font-weight: 700; color: #fff;">BJ Textiles</h3>
-                    <p style="color: var(--text-secondary); font-size: 15px; line-height: 1.7;">Pioneering industrial textile production, custom uniform engineering, and superior fabric manufacturing quality.</p>
+                <!-- BJ Textiles -->
+                <div class="card">
+                    <img src="bj_text-png .png" width="100" alt="BJ Textiles">
+                    <h3>BJ Textiles</h3>
+                    <p>Superior fabric manufacturing and uniform engineering.</p>
                 </div>
-
-                <!-- 4. Salharo -->
-                <div class="ent-card" data-aos="fade-up" data-aos-delay="300">
-                    <img src="SALHARO.png" alt="Salharo Logo" class="ent-logo">
-                    <h3 style="font-size: 24px; font-weight: 700; color: #fff;">Salharo</h3>
-                    <p style="color: var(--text-secondary); font-size: 15px; line-height: 1.7;">A premier modern brand delivering high-end consumer market items with exquisite styling and uncompromised durability.</p>
+                <!-- Salharo -->
+                <div class="card">
+                    <img src="SALHARO.png" width="100" alt="Salharo">
+                    <h3>Salharo</h3>
+                    <p>Premium branding and high-end consumer goods.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-bottom">
-                <p>&copy; 2026 Saulat Bajwa. All rights reserved.</p>
-                <p style="color: var(--text-tertiary);">Email: saulatbajwa@hotmail.com | Hotline: 03008410721</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 1000, once: true });
-        const cursorDot = document.querySelector('.cursor-dot');
-        const cursorOutline = document.querySelector('.cursor-outline');
-        window.addEventListener('mousemove', (e) => {
-            cursorDot.style.left = `${e.clientX}px`; cursorDot.style.top = `${e.clientY}px`;
-            setTimeout(() => { cursorOutline.style.left = `${e.clientX}px`; cursorOutline.style.top = `${e.clientY}px`; }, 50);
+        // Ripple effect logic
+        window.addEventListener('click', (e) => {
+            const r = document.createElement('div');
+            r.className = 'cursor-ripple';
+            r.style.left = e.clientX + 'px';
+            r.style.top = e.clientY + 'px';
+            document.body.appendChild(r);
+            setTimeout(() => r.remove(), 600);
         });
     </script>
 </body>
