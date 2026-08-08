@@ -4,21 +4,28 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Enterprises — Saulat Bajwa Group</title>
+<!-- Favicon Link -->
+<link rel="icon" type="image/png" href="BJ&CO ORIGINAL PNG LOGO EDIT copy.jpg">
 <link rel="stylesheet" href="style.css">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-  .enterprises-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 50px; }
+  .enterprises-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 35px; margin-top: 50px; }
   .ent-card {
-    background: var(--bg-panel); border: 1px solid var(--border-glow); border-radius: 24px; padding: 40px;
+    background: var(--bg-card); border: 1px solid var(--border-line); border-radius: 26px; padding: 45px;
     display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px; transition: 0.4s;
+    backdrop-filter: blur(20px);
   }
-  .ent-card:hover { transform: translateY(-8px); border-color: var(--gold-primary); box-shadow: 0 20px 45px rgba(255, 215, 0, 0.2); }
-  .ent-logo { height: 90px; width: auto; object-fit: contain; filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.3)); }
+  .ent-card:hover { transform: translateY(-8px); border-color: var(--gold-primary); box-shadow: 0 25px 50px rgba(243, 198, 93, 0.2); }
+  .ent-logo { height: 95px; width: auto; object-fit: contain; filter: drop-shadow(0 0 12px rgba(243, 198, 93, 0.25)); }
   @media(max-width: 768px) { .enterprises-grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
+
+<div class="preloader">
+  <div class="loading-text">SAULAT BAJWA</div>
+</div>
 
 <div class="cursor-dot"></div>
 <div class="cursor-outline"></div>
@@ -33,14 +40,15 @@
       <a href="map.html">Punjab Hub</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <a href="tel:03008410721" class="btn" style="padding: 10px 20px; font-size: 13px;">0300 8410721</a>
+    <a href="tel:03008410721" class="btn" style="padding: 10px 22px; font-size: 13px;">0300 8410721</a>
   </div>
 </header>
 
-<section class="section" style="padding-top: 180px;">
+<section class="section" style="padding-top: 190px;">
   <div class="container">
-    <span style="font-size: 13px; text-transform: uppercase; letter-spacing: 3px; color: var(--gold-primary); font-weight: 800;" data-aos="fade-up">Corporate Portfolio</span>
+    <span style="font-size: 13px; text-transform: uppercase; letter-spacing: 4px; color: var(--gold-primary); font-weight: 800;" data-aos="fade-up">Corporate Ecosystem</span>
     <h1 style="font-size: 44px; font-weight: 900; color: #fff; margin-top: 10px;" data-aos="fade-up">Flagship Group Enterprises</h1>
+    <p class="story-para" data-aos="fade-up" style="max-width: 750px; margin-top: 15px;">Each enterprise under Saulat Bajwa's leadership represents a distinct pillar of commercial power, combining innovative execution with unwavering quality standards.</p>
     
     <div class="enterprises-grid">
       
@@ -48,28 +56,28 @@
       <div class="ent-card" data-aos="fade-up">
         <img src="BJ&CO ORIGINAL PNG LOGO EDIT copy.jpg" alt="BJ & Company" class="ent-logo">
         <h3 style="font-size: 24px; color: #fff; font-weight: 800;">BJ &amp; Company</h3>
-        <p style="color: var(--text-muted); font-size: 14px;">Premier corporate trade and supply house delivering absolute market leadership and uncompromised quality.</p>
+        <p style="color: var(--text-dim); font-size: 15px; line-height: 1.7;">Premier corporate trade and supply house delivering absolute market leadership and uncompromised quality.</p>
       </div>
 
       <!-- 2. BJ Commerce -->
       <div class="ent-card" data-aos="fade-up" data-aos-delay="100">
         <img src="bj commrece.png" alt="BJ Commerce" class="ent-logo">
         <h3 style="font-size: 24px; color: #fff; font-weight: 800;">BJ Commerce (Pvt) Ltd</h3>
-        <p style="color: var(--text-muted); font-size: 14px;">Advanced commercial distribution network handling large-scale industrial procurement and supply chains.</p>
+        <p style="color: var(--text-dim); font-size: 15px; line-height: 1.7;">Advanced commercial distribution network handling large-scale industrial procurement and supply chains.</p>
       </div>
 
       <!-- 3. BJ Textiles -->
       <div class="ent-card" data-aos="fade-up" data-aos-delay="200">
         <img src="bj text.jpeg" alt="BJ Textiles" class="ent-logo">
         <h3 style="font-size: 24px; color: #fff; font-weight: 800;">BJ Textiles</h3>
-        <p style="color: var(--text-muted); font-size: 14px;">High-grade textile manufacturing, custom uniform solutions, and fabric engineering standards.</p>
+        <p style="color: var(--text-dim); font-size: 15px; line-height: 1.7;">High-grade textile manufacturing, custom uniform solutions, and fabric engineering standards.</p>
       </div>
 
       <!-- 4. Salharo -->
       <div class="ent-card" data-aos="fade-up" data-aos-delay="300">
         <img src="SALHARO.jpg" alt="Salharo" class="ent-logo">
         <h3 style="font-size: 24px; color: #fff; font-weight: 800;">Salharo</h3>
-        <p style="color: var(--text-muted); font-size: 14px;">Innovative brand identity delivering premium market goods with state-of-the-art commercial styling.</p>
+        <p style="color: var(--text-dim); font-size: 15px; line-height: 1.7;">Innovative brand identity delivering premium market goods with state-of-the-art commercial styling.</p>
       </div>
 
     </div>
