@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SAULAT BAJWA — ULTIMATE ENTERPRISE PORTFOLIO (1000-LINE PRODUCTION CSS)
+   SAULAT BAJWA — ULTIMATE ENTERPRISE PORTFOLIO (FINAL PRODUCTION CSS)
    Theme: Midnight Obsidian & Royal Champagne Gold
    ========================================================================== */
 
@@ -104,12 +104,24 @@ body {
 .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; align-items: center; }
 .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
 
+/* Breathing Animation to Bind Clients on Page */
+@keyframes breathe {
+    0%, 100% { transform: scale(1); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+    50% { transform: scale(1.02); box-shadow: 0 20px 50px rgba(212, 175, 55, 0.2); }
+}
+
 .card-glass {
     background: var(--panel-glass); border: 1px solid var(--border);
     border-radius: 24px; padding: 45px 35px; transition: var(--transition-smooth);
     position: relative; overflow: hidden; backdrop-filter: blur(15px);
+    animation: breathe 6s ease-in-out infinite;
 }
-.card-glass:hover { border-color: var(--border-gold); transform: translateY(-8px); box-shadow: 0 25px 50px rgba(0,0,0,0.6); }
+.card-glass:hover {
+    animation-play-state: paused;
+    border-color: var(--gold);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(212, 175, 55, 0.3);
+}
 
 /* Footer */
 .footer { background: var(--bg-surface); border-top: 1px solid var(--border); padding: 90px 8% 35px; margin-top: 120px; }
